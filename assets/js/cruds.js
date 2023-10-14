@@ -351,8 +351,7 @@ function openDeleteModal(i){
 
 //delete method
 function deleteModal(){
-    console.log(updateIndex);
-    products.splice(updateIndex,1);
+    products.splice(elementIndex,1);
     localStorage.setItem('products',JSON.stringify(products));
 }
 
