@@ -113,6 +113,7 @@ deleteBtn.addEventListener('click',()=>{
     deleteModal();
     closeDeleteModal();
     getAllProducts();
+    CheckProdcuts();
 })
 
 // -------------- Delete All Products --------------
