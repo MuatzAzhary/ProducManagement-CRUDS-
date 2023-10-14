@@ -1,0 +1,546 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Noto+Sans+Arabic:wght@300;400;500;600;700;800;900&family=Open+Sans:ital,wght@0,400;0,800;1,600&family=Poppins:ital,wght@0,500;0,600;1,300&family=Rubik:wght@300;400;500;600&family=Work+Sans:ital,wght@0,300;0,700;1,400&display=swap');
+/* ------------------------- Global roles end ------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    /* colors */
+    --green-bg-hover- : #14a800;
+    --green-bg-primary- : #108a00;
+    --titleColor- : #001e00;
+    --green-bg-secandary- : #5e6d55;
+
+    /* sizing */
+    --fs-14- : 14px;
+    --fs-18- : 18px;
+    --fs-25- : 25px;
+
+    border-radius: 20px;
+
+    --transition- : .4s ease;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--green-bg-primary-);
+    border-radius: 20px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--green-bg-secandary-);
+}
+body{
+    font-family: 'Rubik', sans-serif;
+    background-color: #fff;
+    position: relative;
+    transition: var(--transition-);
+}
+li{
+    list-style: none;
+}
+button,input{
+    outline: none;
+    border: none;
+}
+main{
+    padding: 20px 200px;
+    position: relative;
+}
+hr{
+    background-color: var(--green-bg-secandary-);
+    height: 2px;
+    margin: 40px auto;
+}
+input{
+    background-color: #f7faf7;
+    transition: var(--transition-);
+    color: var(--green-bg-secandary-);
+    padding-left: 10px;
+    font-size: var(--fs-18-);
+    letter-spacing: 1px;
+}
+input::placeholder{
+    color: var(--green-bg-secandary-);
+}
+input:focus{
+    background-color: #e4ebe4;
+}
+/* #f1ffea */
+.btn-primary{
+    background-color: var(--green-bg-primary-);
+    color: #ffff;
+    font-size: var(--fs-18-);
+    cursor: pointer;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    width: fit-content;
+    border-radius: 10px;
+    transition:var(--transition-);
+    font-weight: 600;
+}
+.btn-primary:hover{
+    background-color:var(--green-bg-hover-) ;
+    /* #edf5e9 */
+    color: #fff;
+}
+button{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+main .dark-mode-btn{
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    background-color: transparent;
+    font-size: var(--fs-25-);
+    cursor: pointer;
+}
+
+.dark-mode-btn i{
+    transition: var(--transition-);
+    color: var(--green-bg-hover-);
+    display: none;
+}
+.active-dark{
+    background-color: #001e00 !important;
+}
+.active-dark-color{
+    color: var(--green-bg-secandary-) !important;
+}
+
+.dark-mode-btn i.active{
+    display: block;
+    animation: dark-light-btns .3s linear forwards;
+}
+
+input.valid{
+    border: 2px solid green;
+    color: green;
+    transition: .1s;
+}
+input.in-valid{
+    border: 2px solid rgb(224, 1, 1);
+    color: rgb(224, 1, 1);
+    transition: .1s;
+}
+/* ------------------------- Global roles end ------------------------- */
+
+/* ------------------------- header start ------------------------- */
+header{
+    text-align: center;
+}
+header h2{
+    font-size: var(--fs-25-);
+    color: var(--green-bg-primary-);
+}
+header p{
+    font-size: var(--fs-18-);
+    color: var(--green-bg-secandary-);
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+/* ------------------------- header end ------------------------- */
+
+/* ------------------------- upper btns start ------------------------- */
+.btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns .search{
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    width: 50%;
+}
+.btns .search input{
+    height: 50px;
+    border-radius: 10px;
+    width: 100%;
+}
+#create i{
+    font-weight: 900;
+}
+
+.clear-btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: 10px;
+}
+/* ------------------------- upper btns end ------------------------- */
+
+/* ------------------------- products list start ------------------------- */
+.products{
+    text-align: center;
+    padding-top: 50px;
+}
+.products .empty{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e4ebe4;
+    color: var(--green-bg-hover-);
+    font-size: var(--fs-18-);
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+.products h2{
+    font-size: fs2q;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--green-bg-primary-);
+}
+.products p{
+    color: var(--green-bg-secandary-);
+    font-size: var(--fs-14-);
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.table{
+    width: 100%;
+}
+table{
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+th,td{
+    padding: 20px;
+    border: none;
+}
+thead{
+    background-color: #e4ebe4;
+    color: var(--green-bg-secandary-);
+}
+
+table td{
+    border-bottom: 1px solid #eee;
+    color: var(--titleColor-);
+}
+table .action-btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 10px;
+    position: relative;
+}
+table .action-btns button{
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: var(--fs-14-);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-);
+}
+table .action-btns #update ,table .action{
+    background-color: rgb(243, 255, 239);
+    color: var(--green-bg-hover-);
+}
+table .action{
+    display: none;
+}
+table .action-btns #update,table .action:hover{
+    color: var(--green-bg-primary-);
+}
+table .action-btns #delete,
+.delete-modal .delete-btns .delete{
+    background-color: rgb(255 239 239);
+    color: #ff2f2f;
+}
+table .action-btns button:last-child:hover,
+.delete-modal .delete-btns .delete:hover{
+    color: rgb(224, 1, 1);
+}
+
+.action-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px 10px;
+    position: relative;
+}
+.action-modal .close{
+    display: none;
+}
+/* ------------------------- products list end ------------------------- */
+
+
+/* ------------------------- modals start ------------------------- */
+#CreateModal,#DeleteModal{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+}
+#CreateModal .modal,
+#DeleteModal .modal{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#CreateModal.active,
+#DeleteModal.active{
+    display: block;
+    animation: action-modal-open .3s linear forwards;
+}
+.create-modal,
+.delete-modal{
+    width: 50%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, .4);
+    padding: 20px;
+    position: relative;
+    text-align: center;
+}
+.create-modal .closebtn,
+.delete-modal .closebtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: var(--fs-25-);
+    color: var(--green-bg-secandary-);
+    background-color: transparent;
+    cursor: pointer;
+}
+.create-modal h2,
+.delete-modal h2{
+    color: var(--titleColor-);
+    font-size: var(--fs-25-);
+    letter-spacing: 1px;
+}
+.create-modal .form{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.create-modal .form input{
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    font-size: var(--fs-14-);
+}
+.create-modal .form .price{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 10px 0px;
+    gap: 0px 10px;
+}
+.create-modal .form .price input{
+    width: 20%;
+}
+.create-modal .form .price #total{
+    position: relative;
+    background-color: rgb(255 239 239);
+    color: #ff2f2f;
+    padding: 4px;
+    border-radius: 5px;
+}
+.create-modal .form .price #total::before{
+    content: 'Total : $';
+}
+.create-modal .form .price #total.valid{
+    background-color: rgb(243, 255, 239);
+    color: green;
+}
+.create-modal .form .form-btn{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: var(--fs-14-);
+    font-weight: 600;
+    letter-spacing: 1px;
+    background-color: var(--green-bg-primary-);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 20px;
+    transition: var(--transition-);
+}
+.create-modal .form .form-btn:hover{
+    background-color: var(--green-bg-hover-);
+}
+.delete-modal p{
+    color: var(--green-bg-secandary-);
+    font-size: var(--fs-18-);
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+.delete-modal .delete-btns{
+    display: flex;
+    align-items: center;
+    gap: 0px 10px;
+    justify-content: center;
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+.delete-modal .delete-btns button{
+    font-size: var(--fs-18-);
+    padding: 10px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.delete-modal .delete-btns #close-btn{
+    background-color: var(--green-bg-secandary-);
+    color: var(--titleColor-);
+}
+/* ------------------------- Modals end ------------------------- */
+
+/* ------------------------- Animation start ------------------------- */
+@keyframes action-modal-open {
+    0%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    50%{
+        opacity: .5;
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes dark-light-btns {
+    0%{
+        opacity: 0;
+    }    
+    50%{
+        opacity: .5;
+    }    
+    100%{
+        opacity: 1;
+    }    
+}
+/* ------------------------- Animation end ------------------------- */
+
+/* ------------------------- responsive design start ------------------------- */
+@media (max-width:567px) {
+    main{
+        padding-top: 60px !important;
+    }
+    .tasks,.discount,.ads,.category{
+        display: none;
+    }
+    th,td{
+        padding: 10px;
+    }
+    .btns{
+        justify-content: unsafe;
+        flex-direction: column-reverse;
+    }
+    #create{
+        margin: 10px auto;
+    }
+    .btns .search{
+        flex-direction: column;
+        gap: 10px 0px;
+        width: 100%;
+        margin-top: 20px;
+    }
+    table .action{
+        display: block;
+    }
+    table{
+        font-size: var(--fs-14-);
+        width: auto;
+        margin: 30px auto 10px;
+    }
+    .action-modal{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 2px 2px 10px #ddd;
+    gap: 10px;
+    }
+    .action-modal .close{
+        width: fit-content;
+        background-color: transparent;
+        font-size: var(--fs-25-);
+        color: var(--green-bg-secandary-);
+        cursor: pointer;
+        display: block;
+    }
+    #action-model{
+        display: none;
+    }
+    #action-model.active{
+        display: block;
+        animation: action-modal-open .4s linear forwards;
+    }
+    .create-modal .form .price{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 10px 0px;
+        gap: 0px 5px;
+    }
+    .create-modal .form .price input{
+        width: 16%;
+        font-size:10px;
+    }
+    .create-modal .form .price #total{
+        padding: 4px;
+        border-radius: 5px;
+        font-size: var(--fs-14-);
+    }
+    .create-modal,
+    .delete-modal{
+        padding: 60px 10px 10px;
+    }
+    header p{
+        font-size: var(--fs-14-);
+    }
+    main .dark-mode-btn{
+        right: 30px;
+    }
+   
+    
+}
+@media (max-width:769px) {
+    main{
+        padding: 20px 10px;
+    }
+    .create-modal,
+    .delete-modal{
+        width: 80%;
+    }
+    .clear-btn{
+        justify-content: center;
+        margin-top: 20px;
+    }
+    .clear-btn #clear{
+        font-size: var(--fs-14-);
+    }
+}
+/* ------------------------- responsive design end ------------------------- */

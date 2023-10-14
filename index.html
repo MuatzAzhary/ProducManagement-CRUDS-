@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- css file -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Product Management</title>
+</head>
+<body>
+    
+</body>
+    <main>
+        <button class="dark-mode-btn" id="dark-btn"> <i class="bi bi-moon-stars-fill js-dark-icon active"></i><i class="bi bi-sun-fill js-light-icon"></i></button>
+        <!-- upper -->
+        <header>
+            <h2>Product Management</h2>
+            <p>Created by Mutaz Azhery</p>
+        </header>
+        <hr>
+        <div class="btns">
+            <div class="search">
+                <input type="text" placeholder="Search by name / category" class="input" id="search">
+                <button class="btn-primary" id="searchbtn"><i class="bi bi-search"></i><span>Search</span></button>
+                
+            </div>
+            <div>
+                <button class="create btn-primary" id="create"><i class="bi bi-plus-lg"></i><span>Create</span></button>
+            </div>
+        </div>
+        <div class="products">
+            <h2 class="darl-color">Products</h2>
+            <p>Here well be rendering the product list.</p>
+            <div id="clear-content">
+                <div class="clear-btn">
+                    <button id="clear" class="btn-primary"></button>
+                </div>
+            </div>
+           <div class="table">
+            <div class="empty"> 
+                <h2>No thing yet ..</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th class="tasks">Tasks</th>
+                        <th class="ads">Ads</th>
+                        <th class="discount">Discount</th>
+                        <th class="total">Total</th>
+                        <th class="category">Category</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+           </div>
+        </div>
+    </main>
+
+    <div id="CreateModal">
+        <div class="modal">
+            <div class="create-modal modal-dark">
+                <button class="closebtn" id="close-btn"><i class="bi bi-x"></i></button>
+                <h2 class="darl-color">Create New Prodact</h2>
+                <div class="form">
+                    <input type="text" placeholder="Product name" class="input" id="title">
+                    <div class="price">
+                        <input type="number" class="input" placeholder="Price" id="price">
+                        <input type="number"class="input" placeholder="Tasks" id="tasks">
+                        <input type="number" class="input" placeholder="Ads" id="ads">
+                        <input type="number" class="input" placeholder="Discount" id="discount">
+                        <span id="total">0</span>
+                    </div>
+                    <input type="text" class="input" placeholder="Product Category" id="category">
+                    <button class="form-btn" id="formBtn">Create</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="DeleteModal">
+        <div class="modal">
+            <div class="delete-modal delete-dark">
+                <button class="closebtn" id="close-modal"><i class="bi bi-x"></i></button>
+                <h2 class="darl-color">Delete ?</h2>
+                <p>Are you sure you want to delete ?</p>
+                <div class="delete-btns">
+                    <button id="cancle-modal">Cancle</button>
+                    <button class="delete" id="deletebtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/cruds.js"></script>
+</html>
