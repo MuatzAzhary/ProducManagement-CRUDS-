@@ -19,7 +19,7 @@ let empty = document.querySelector('.empty');
 // -------------- Search items--------------
 let searchInput = document.getElementById('search');
 let searchBtn = document.getElementById('searchbtn');
-
+let formTitle = document.getElementById('form-title');
 
 let elementIndex = 0;
 let mood = 'create';
@@ -60,6 +60,7 @@ function ProductForm(){
     if(mood === "update"){
         products[elementIndex] = product;
         formBtn.innerHTML = 'Create';
+        formTitle.innerHTML = 'Create new product';
         mood = "create";
 
     }else{
@@ -342,6 +343,7 @@ function openUpdateModal(i){
     getTotal();
     elementIndex = i;
     formBtn.innerHTML = 'Update';
+    formTitle.innerHTML = 'Update a product';
     mood = 'update';
 }
 
